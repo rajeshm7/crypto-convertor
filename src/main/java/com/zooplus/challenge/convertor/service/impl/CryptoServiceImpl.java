@@ -26,8 +26,7 @@ public class CryptoServiceImpl implements CryptoService {
     Utility utility;
 
     public List<History> getHistory(String username){
-        List<History> histories = historyRepository.findByUsername(username);
-        return histories;
+        return historyRepository.findByUsername(username);
     }
 
     @Override
@@ -42,9 +41,7 @@ public class CryptoServiceImpl implements CryptoService {
         String countryCode = utility.getCountryCode(search.getIpaddress());
         Currency currency = currencyRepository.findByCurrencyCodeAndCryptoCode(countryCode, search.getCryptocurrency());
         String symbol = utility.getCurrencySymbol(countryCode);
-        Price price = new Price(currency.getCryptoValue(), symbol, countryCode);
-        System.out.println("price: "+price);
-        return price;
+        return new Price(currency.getCryptoValue(), symbol, countryCode);
     }
 
 }

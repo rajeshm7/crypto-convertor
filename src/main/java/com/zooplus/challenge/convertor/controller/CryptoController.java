@@ -27,7 +27,6 @@ public class CryptoController {
     @GetMapping("/history")
     public String getHistory(Model model, @RequestParam String username){
         List<History> histories = cryptoService.getHistory(username);
-        System.out.println("history name : "+username);
         model.addAttribute("histories", histories);
         model.addAttribute("cryptocurrencies", getCryptocurrencies());
         model.addAttribute("username", username);
@@ -42,7 +41,6 @@ public class CryptoController {
 
     @PostMapping("/index")
     public String home(Model model, Search search){
-        System.out.println("search: "+search);
         model.addAttribute("cryptocurrencies", getCryptocurrencies());
         Price price = null;
 
