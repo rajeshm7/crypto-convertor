@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversion History</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <style>
+        .content{
+            max-width: 500px;
+            margin: auto;
+        }
+        .rightcorner{
+            position:absolute;
+            top:0;
+            right:0;
+        }
+        .leftcorner {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+    Welcome, <span th:text ="${#authentication.getPrincipal().getUser().getName()}"></span>
+    <br>
+</div>
+<div align="leftcorner">
+    <form class="form-inline my-2 my-lg-0" th:object="${search}" method="post" th:action="@{/index}">
+        <input th:value="${#authentication.getPrincipal().getUser().getUsername()}" type="hidden" th:name="username"/>
+        <button sec:authorize="isAuthenticated()" class="btn btn-outline-primary my-2 my-sm-0 btn-sm" type="submit">Click here to navigate to Convertor</button>
+    </form>
+</div>
+
+<div class="rightcorner">
+    <form class="form-inline my-2 my-lg-0" form-method="post" th:action="@{/logout}">
+        <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger my-2 my-sm-0 btn-sm" type="submit">Logout</button>
+        <button sec:authorize="isAnonymous()" th:href="@{~/login}" class="btn btn-outline-info my-2 my-sm-0 btn-sm" type="submit">Login</button>
+    </form>
+</div>
+
+<div class="content">
+    <h2>Conversion History</h2>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">username</th>
+            <th scope="col">Crypto</th>
+            <th scope="col">Date</th>
+            <th scope="col">IP Address</th>
+            <th scope="col">Price</th>
+            <th scope="col">Currency</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="history , iterator : ${histories}">
+            <th th:text="${iterator.index} + 1" scope="row">1</th>
+            <td th:text="${history.username}">n</td>
+            <td th:text="${history.cryptocurrency}">n</td>
+            <td th:text="${history.date}">d</td>
+            <td th:text="${history.ipaddress}">n</td>
+            <td th:text="${history.price}">n</td>
+            <td th:text="${history.currency}">n</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptocurrency price calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <style>
+        .content{
+            max-width: 500px;
+            margin: auto;
+        }
+        .topcorner{
+            position:absolute;
+            top:0;
+             right:0;
+        }
+        .leftcorner {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<div sec:authorize="isAuthenticated()">
+    Welcome, <span th:text ="${#authentication.getPrincipal().getUser().getName()}"></span>
+    <br>
+</div>
+
+<div align="leftcorner">
+    <form class="form-inline my-2 my-lg-0" th:action="@{/history}">
+        <input th:value="${#authentication.getPrincipal().getUser().getUsername()}" type="hidden" th:name="username"/>
+        <button type="submit" class="btn btn-outline-primary my-2 my-sm-0 btn-sm">Click here to see your Conversion History</button>
+    </form>
+</div>
+
+<div class="topcorner">
+<form class="form-inline my-2 my-lg-0" form-method="post" th:action="@{/logout}">
+    <button sec:authorize="isAuthenticated()" class="btn btn-outline-danger my-2 my-sm-0 btn-sm" type="submit">Logout</button>
+    <button sec:authorize="isAnonymous()" th:href="@{~/login}" class="btn btn-outline-info my-2 my-sm-0 btn-sm" type="submit">Login</button>
+</form>
+</div>
+
+<div class="content">
+    <h2>Cryptocurrency price calculator</h2>
+    <div th:if="${successMessage}" th:text="${successMessage}" class="alert alert-success" role="alert"></div>
+    <div th:if="${errorMessage}" th:text="${errorMessage}" class="alert alert-danger" role="alert"></div>
+    <form th:object="${search}" th:action="@{/index}" th:method="POST">
+        Select a Cryptocurrency
+        <div class="mb-3">
+            <select th:field="*{cryptocurrency}" name="cryptocurrency">
+                <option th:each="cryptocurrency : ${cryptocurrencies}"
+                        th:selected="BTC"
+                        th:text="${cryptocurrency.name}" th:value="${cryptocurrency.code}"></option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="ipAddress" class="form-label">IP Address</label>
+            <input th:field="*{ipaddress}" type="input" name="ipaddress" class="form-control" id="ipAddress" aria-describedby="emailHelp">
+        </div>
+
+        <input type="hidden" th:value="${#authentication.getPrincipal().getUser().getName()}" name="name" th:field="*{name}" />
+        <input type="hidden" th:value="${#authentication.getPrincipal().getUser().getUsername()}" name="username" th:field="*{username}" />
+        <button type="submit" class="btn btn-outline-primary my-2 my-sm-0 btn-sm">Submit</button>
+    </form>
+    <br>
+
+    <div th:if="${price != null}" class="alert alert-success">
+        <div>
+            <span>Current unit price is </span><br>
+            <span th:text="${price.symbol}"></span> <span th:text="${price.unitPrice}"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+/** Crypto to EUR
+ * 1 Bitcoin (BTC) = 23,238.86 Euro "€" (EUR)
+ * 1 Ethereum (ETH) = 1,660.53 Euro "€" (EUR)
+ * 1 Tether (USDT) = 0.978155 Euro "€" (EUR)
+ * 1 USD Coin (USDC) = 0.977787 Euro "€" (EUR)
+ * 1 BNB (BNB) = 285.08 Euro "€" (EUR)
+ * 1 Binance USD (BUSD) = 0.978316 Euro "€" (EUR)
+ * 1 XRP (XRP) = 0.381421 Euro "€" (EUR)
+ * 1 Cardano (ADA) = 0.518215 Euro "€" (EUR)
+ * 1 Solana (SOL) = 43.01 Euro "€" (EUR)
+ * 1 Dogecoin (DOGE) = 0.068848 Euro "€" (EUR)
+ *
+ */
+
+/** Crypto to GBP
+ * 1 Bitcoin (BTC) = 19,488.61 Pound Sterling "£" (GBP)
+ * 1 Ethereum (ETH) = 1,395.34 Pound Sterling "£" (GBP)
+ * 1 Tether (USDT) = 0.821567 Pound Sterling "£" (GBP)
+ * 1 USD Coin (USDC) = 0.821233 Pound Sterling "£" (GBP)
+ * 1 BNB (BNB) = 239.56 Pound Sterling "£" (GBP)
+ * 1 Binance USD (BUSD) = 0.821737 Pound Sterling "£" (GBP)
+ * 1 XRP (XRP) = 0.321806 Pound Sterling "£" (GBP)
+ * 1 Cardano (ADA) = 0.435205 Pound Sterling "£" (GBP)
+ * 1 Solana (SOL) = 36.12 Pound Sterling "£" (GBP)
+ * 1 Dogecoin (DOGE) = 0.057895 Pound Sterling "£" (GBP)
+ *
+ */
+
+/** Crypto to USD
+ * 1 Bitcoin (BTC) = 21,287.20 United States Dollar "$" (USD)
+ * 1 Ethereum (ETH) = 1,730.88 United States Dollar "$" (USD)
+ * 1 Tether (USDT) = 1.00 United States Dollar "$" (USD)
+ * 1 USD Coin (USDC) = 0.999928 United States Dollar "$" (USD)
+ * 1 BNB (BNB) = 277.14 United States Dollar "$" (USD)
+ * 1 Binance USD (BUSD) = 1.00 United States Dollar "$" (USD)
+ * 1 XRP (XRP) = 0.370205 United States Dollar "$" (USD)
+ * 1 Cardano (ADA) = 0.512011 United States Dollar "$" (USD)
+ * 1 Solana (SOL) = 42.23 United States Dollar "$" (USD)
+ * 1 Dogecoin (DOGE) = 0.068993 United States Dollar "$" (USD)
+ *
+ */
+
+ /** Crypto to AUD
+  * 1 Bitcoin (BTC) = 33,867.93 Australian Dollar "$" (AUD)
+  * 1 Ethereum (ETH) = 2,425.09 Australian Dollar "$" (AUD)
+  * 1 Tether (USDT) = 1.43 Australian Dollar "$" (AUD)
+  * 1 USD Coin (USDC) = 1.43 Australian Dollar "$" (AUD)
+  * 1 BNB (BNB) = 416.19 Australian Dollar "$" (AUD)
+  * 1 Binance USD (BUSD) = 1.43 Australian Dollar "$" (AUD)
+  * 1 XRP (XRP) = 0.556723 Australian Dollar "$" (AUD)
+  * 1 Cardano (ADA) = 0.752417 Australian Dollar "$" (AUD)
+  * 1 Solana (SOL) = 62.61 Australian Dollar "$" (AUD)
+  * 1 Dogecoin (DOGE) = 0.100439 Australian Dollar "$" (AUD)
+  *
+  */
+
+ /** Crypto to JPY
+  * 1 Bitcoin (BTC) = 3,155,735 Japanese Yen "¥" (JPY)
+  * 1 Ethereum (ETH) = 226,255 Japanese Yen "¥" (JPY)
+  * 1 Tether (USDT) = 133.24 Japanese Yen "¥" (JPY)
+  * 1 USD Coin (USDC) = 133.16 Japanese Yen "¥" (JPY)
+  * 1 BNB (BNB) = 38,819.61 Japanese Yen "¥" (JPY)
+  * 1 Binance USD (BUSD) = 132.95 Japanese Yen "¥" (JPY)
+  * 1 XRP (XRP) = 52.17 Japanese Yen "¥" (JPY)
+  * 1 Cardano (ADA) = 70.52 Japanese Yen "¥" (JPY)
+  * 1 Solana (SOL) = 5,857.33 Japanese Yen "¥" (JPY)
+  * 1 Dogecoin (DOGE) = 9.40 Japanese Yen "¥" (JPY)
+  *
+  */
