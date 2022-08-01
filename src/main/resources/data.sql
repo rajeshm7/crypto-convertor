@@ -1,14 +1,3 @@
-INSERT INTO HISTORY (name, username, cryptocurrency, date, ipaddress, price, currency) VALUES
-  ('admin', 'admin', 'USDC', CURRENT_TIMESTAMP, "123232", "0.977787", "EUR");
-
-INSERT INTO HISTORY (name, username, cryptocurrency, date, ipaddress, price, currency) VALUES
-  ('admin', 'admin', 'BTC', CURRENT_TIMESTAMP, "3245", "21287.2", "USD");
-
-
-INSERT INTO USERS (username, password, name, email, is_active) VALUES
-    ('user2', '$2a$10$Bpg89dR7DI3bVNutG1FBqukLIGr80BQpXUhrdLnAxp/EUwABMWsyi', 'test user', 'test@email.com', true);
-
-
 INSERT INTO CURRENCY (name, currency_code, crypto_name, crypto_value, crypto_code) VALUES
   ('Euro', 'EUR', 'Bitcoin', 23238.86, 'BTC');
 INSERT INTO CURRENCY (name, currency_code, crypto_name, crypto_value, crypto_code) VALUES
