@@ -4,7 +4,13 @@ pipeline {
         stage('Build Maven'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajeshm7/crypto-convertor']]])
-                sh './mvnw clean install -Dmaven.test.skip=true'
+                sh './mvnw clean install'
+            }
+        }
+        stage('Run tests'){
+            steps{
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rajeshm7/crypto-convertor']]])
+                sh './mvnw test'
             }
         }
         stage('Build docker image'){
@@ -27,7 +33,7 @@ pipeline {
         stage('Deploy to k8s'){
             steps{
                 script{
-                    echo "This step should be deploying the docker image to Kubernetes. Since I don't have AWS account, I didn't add it."
+                    echo "This step should be deploying the docker image to Kubernetes. Since I don't have AWS account, I didnt add it."
                 }
             }
         }
