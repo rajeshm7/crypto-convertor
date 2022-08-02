@@ -126,6 +126,7 @@ CREATE SCHEMA currency_convertor_db
 
 
 3. Now the application will direct to 'login' page.
+<img width="1213" alt="LoginPage" src="https://user-images.githubusercontent.com/17959360/182264816-8a8da28b-bc29-4a06-aeb1-c1f8b7eb1086.png">
 
 
 3. Login with any of the below credentials
@@ -137,28 +138,49 @@ CREATE SCHEMA currency_convertor_db
 4. After successful login, application will redirect to
 the landing page.
 
+<img width="1266" alt="LandingPage" src="https://user-images.githubusercontent.com/17959360/182264058-6534acaa-1dee-4879-90e7-b6a8059f2ae6.png">
+
 
 5. The landing page has "Cryptocurrency price calculator".
 The user can select the cryptocurrency from the dropdown
 and enter the IP Address(optional) and click submit.
 
+<img width="1218" alt="SelectCrypto" src="https://user-images.githubusercontent.com/17959360/182264896-86e223d6-eff9-46f1-ba0f-30a08f820b50.png">
+
+<img width="1216" alt="EnterIP" src="https://user-images.githubusercontent.com/17959360/182264903-ef5af866-f8ef-4756-99d1-4a76f01a3a4d.png">
+
 
 6. Based on the input, the price will be calculated and displayed
 with the currency symbol.
+
+<img width="1220" alt="PriceDisplayedWithCurrencySymbol" src="https://user-images.githubusercontent.com/17959360/182264917-bec78308-83a8-44ab-9581-b36d4d5671f4.png">
+
+<img width="1217" alt="Japanese Yen" src="https://user-images.githubusercontent.com/17959360/182264924-6aeb0877-119c-4433-8d8b-44c6f6f24bd3.png">
 
 
 7. The user can click to check their conversion history by clicking
 "Click here to see your Conversion History" in the top left corner
 of the landing page.
 
+<img width="1220" alt="Click here to see conversion history" src="https://user-images.githubusercontent.com/17959360/182264952-c0eee32f-0658-4601-8691-1fabdce5f7fa.png">
 
-8. The user can come back to the Cryto price calculator page, by clicking
+
+8. The user can see their Cryptocurrency price calculator history in the "conversion history page".
+
+<img width="1215" alt="Conversion History" src="https://user-images.githubusercontent.com/17959360/182265186-fc0374b5-54b5-4e62-b0a9-50134832a20e.png">
+
+
+9. The user can come back to the Cryto price calculator page, by clicking
 "Click here to navigate to Convertor" in the top left corner
 of the conversion history page.
 
+<img width="1216" alt="Navigate Back to Conversion Page" src="https://user-images.githubusercontent.com/17959360/182265211-61dcdbda-f443-4fe4-8287-e3bce2f74896.png">
 
-9. The user can logout by clicking "logout" button on the right
+
+10. The user can logout by clicking "logout" button on the right
 side top corner.
 
+<img width="1220" alt="logout" src="https://user-images.githubusercontent.com/17959360/182265221-79d13326-9612-4009-828c-9491fedba94e.png">
 
-10. The user can re-login after logging out.
+
+11. The user can re-login after logging out if required.
