@@ -184,3 +184,14 @@ side top corner.
 
 
 11. The user can re-login after logging out if required.
+
+
+12. Configured CI/CD in Jenkins and all the pipeline stages ran successfull, please refer the below image
+
+<img width="1512" alt="CI:CD jenkins" src="https://user-images.githubusercontent.com/17959360/182267058-8441bcdf-6dfd-4753-8dc5-ad1f0ccdbfa5.png">
+
+
+13. The docker image also was uploaded succesfully in the dockhub as given below,
+
+<img width="1449" alt="DockerHub" src="https://user-images.githubusercontent.com/17959360/182267071-2d8e6af0-2345-4185-b5cd-161ae70286ec.png">
+
